@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Sophia Simone | Portfolio</title>
 
     <style>
@@ -21,16 +22,20 @@
         }
 
         nav {
-            max-width: 1000px;
-            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
+        }
+
+        .rutgers {
+            color: #cc0033;
         }
 
         nav a {
@@ -40,42 +45,102 @@
         }
 
         nav a:hover {
-            color: #8b5e83;
+            color: #cc0033;
         }
 
         .hero {
-            text-align: center;
-            padding: 100px 20px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 20px;
             background-color: #ffffff;
         }
 
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+        .profile {
+            text-align: center;
+            min-width: 250px;
         }
 
-        .hero p {
+        .profile img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .profile h2 {
+            margin-bottom: 5px;
+        }
+
+        .school {
+            color: #cc0033;
+            font-weight: bold;
+        }
+
+        .details {
+            color: #666666;
+            font-size: 14px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
             font-size: 1.1rem;
             color: #666666;
-            max-width: 600px;
-            margin: 0 auto;
         }
 
-        .about {
+        .button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: 1px solid #cccccc;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #333333;
+            background-color: white;
+        }
+
+        .button:hover {
+            background-color: #cc0033;
+            color: white;
+        }
+
+        .section {
             max-width: 1000px;
             margin: 0 auto;
             padding: 60px 20px;
         }
 
-        .about h2 {
+        .section h2 {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
-        .cards {
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .skill {
+            background-color: #f8e8ec;
+            padding: 10px 18px;
+            border-radius: 20px;
+        }
+
+        .projects {
             display: flex;
             gap: 20px;
-            justify-content: center;
         }
 
         .card {
@@ -84,18 +149,35 @@
             background-color: #ffffff;
             border: 1px solid #dddddd;
             border-radius: 8px;
-            text-align: center;
+        }
+
+        .card h3 {
+            color: #cc0033;
+        }
+
+        .card p {
+            color: #666666;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
             background-color: #333333;
             color: #ffffff;
         }
 
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
         @media (max-width: 700px) {
-            .cards {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .projects {
                 flex-direction: column;
             }
 
@@ -113,78 +195,165 @@
 
 <body>
 
+    <!-- Navigation -->
     <header>
         <nav>
-            <div class="logo">Sophia Simone</div>
+            <div class="logo">
+                <span class="rutgers">R</span> | Rutgers Business School
+            </div>
 
             <div>
                 <a href="#about">About</a>
+                <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </div>
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>Welcome to My Portfolio</h1>
 
-        <p>
-            I am a student building my skills in business, technology,
-            and professional development.
-        </p>
-    </section>
+    <!-- About / Introduction -->
+    <section class="hero" id="about">
 
-    <section class="about" id="about">
-        <h2>About Me</h2>
+        <div class="profile">
 
-        <div class="cards">
+            <img src="Headshot 1.jpg" alt="Sophia Simone">
 
-            <div class="card">
-                <h3>Who I Am</h3>
-                <p>
-                    I am a motivated student who enjoys learning,
-                    taking on new challenges, and growing professionally.
-                </p>
+            <h2>Sophia Simone</h2>
+
+            <div class="school">
+                Rutgers Business School
             </div>
 
-            <div class="card">
-                <h3>My Skills</h3>
-                <p>
-                    Communication, teamwork, organization, problem-solving,
-                    and developing business and technology skills.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>My Goals</h3>
-                <p>
-                    I want to continue developing my professional skills
-                    and gain experience that prepares me for my future career.
-                </p>
+            <div class="details">
+                Marketing Major<br>
+                Expected Graduation: August 2027
             </div>
 
         </div>
+
+
+        <div class="hero-text">
+
+            <h1>
+                Marketing student with a passion for business, creativity, and communication.
+            </h1>
+
+            <p>
+                Welcome! I'm Sophia, a Marketing student at Rutgers Business School.
+                I am developing my skills in marketing, communication, teamwork,
+                organization, and creative problem-solving through my academic,
+                extracurricular, and work experiences.
+            </p>
+
+            <a class="button" href="#contact">
+                Get in Touch
+            </a>
+
+        </div>
+
     </section>
 
-    <section class="about" id="projects">
-        <h2>Projects</h2>
 
-        <p style="text-align: center;">
-            My portfolio projects will be added here as I continue
-            developing my skills.
+    <!-- Skills -->
+    <section class="section" id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">Marketing</div>
+            <div class="skill">Communication</div>
+            <div class="skill">Social Media</div>
+            <div class="skill">Teamwork</div>
+            <div class="skill">Creative Thinking</div>
+            <div class="skill">Organization</div>
+            <div class="skill">Leadership</div>
+            <div class="skill">Customer Service</div>
+            <div class="skill">Microsoft Word</div>
+            <div class="skill">Microsoft Excel</div>
+            <div class="skill">Google Docs</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+
+        <h2>Projects & Experience</h2>
+
+        <div class="projects">
+
+            <!-- Project 1 -->
+            <div class="card">
+
+                <h3>Italian Club Social Media & Merchandise</h3>
+
+                <p>
+                    Managed social media and web platforms to promote club
+                    events and created Instagram stories to document activities.
+                    Also designed member merchandise, including t-shirts,
+                    using Custom Ink.
+                </p>
+
+            </div>
+
+
+            <!-- Project 2 -->
+            <div class="card">
+
+                <h3>Varsity Lacrosse Social Media</h3>
+
+                <p>
+                    Collaborated with teammates to create game-day social media
+                    posts and helped keep the community informed about upcoming
+                    events and activities.
+                </p>
+
+            </div>
+
+
+            <!-- Project 3 -->
+            <div class="card">
+
+                <h3>Yearbook Design & Organization</h3>
+
+                <p>
+                    Revised yearbook pages to maintain consistency throughout
+                    the book and organized photographs and activities by
+                    category and date.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <footer id="contact">
+
+        <h2>Let's Connect</h2>
+
+        <p>
+            <a href="mailto:sophiasimone135@outlook.com">
+                sophiasimone135@outlook.com
+            </a>
         </p>
-    </section>
 
-    <section class="about" id="contact">
-        <h2>Contact</h2>
-
-        <p style="text-align: center;">
-            Thank you for visiting my portfolio!
+        <p>
+            <a href="tel:2014218224">
+                (201) 421-8224
+            </a>
         </p>
-    </section>
 
-    <footer>
-        <p>&copy; 2026 Sophia Simone. All rights reserved.</p>
+        <p>
+            &copy; 2026 Sophia Simone. All rights reserved.
+        </p>
+
     </footer>
 
 </body>
